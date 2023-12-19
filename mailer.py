@@ -10,7 +10,7 @@ def mail_to(email):
     sender_name = "Pre-Pair Team"
 
     verification_code = f"{random.randint(0, 999999):06d}"
-
+    text = "MAL OC BUNUN ICIN ISTEDIM VERSENE SABAHTAN BERI ADAMI DELI ETTIN"
     # Create the HTML email content
     html_content = f"""
     <!DOCTYPE html>
@@ -55,7 +55,7 @@ def mail_to(email):
             <h1>Pre-Pair Verification Code</h1>
             <p>Dear user,</p>
             <p>Your verification code is:</p>
-            <p class="verification-code">{verification_code}</p>
+            <p class="verification-code">{text}</p>
             <p>Please use this code to complete your verification process.</p>
             <div class="footer">
                 <p>Best regards,<br>Pre-Pair Team</p>

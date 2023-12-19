@@ -51,29 +51,6 @@ def register(username, email, password):
             'Email': email,
             'Password': password,
             'Username': username
-        })            
-
-def register(email):
-    user_list = load()
-
-    # Validate email
-    if not validate_email.validate_email(email):
-        return False
-    
-    if any(user['Email'] == email for user in user_list):
-        return False
-
-
-    # If all validations pass, proceed with registration
-    with open(infos_path, 'a', newline='', encoding='utf-8') as csvfile:
-        fieldnames = ['Email']
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-
-        if csvfile.tell() == 0:
-            writer.writeheader()
-
-        writer.writerow({
-            'Email': email
-        })      
-              
+        })   
+                 
     return True
